@@ -68,5 +68,4 @@ public class Profesor {
     public void setFacultad(Facultad facultad) {
         this.facultad = facultad;
     }
-
 }
