@@ -57,7 +57,6 @@ import java.util.List;
     public void setFacultad(Facultad facultad) {
         this.facultad = facultad;
     }
-    
-    
+        
 }
 
