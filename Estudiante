@@ -1,1 +1,91 @@
+package miniSIA;
 
+import java.util.Date;
+import java.util.List;
+
+public class Estudiante {
+    
+    private String nombre;
+    private String apellido;
+    private long id;
+    private String usuario;
+    private Date fechaNacimiento;
+    private List<Grupo> grupos;
+    private List<Carrera> carrera;
+    private double notas;
+    private double PAPA;
+
+
+    public String getNombre () {
+        return this.nombre;
+    }
+
+    public void setNombre (String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido () {
+        return this.apellido;
+    }
+
+    public void setApellido (String apellido) {
+        this.apellido = apellido;
+    }
+
+    public long getId () {
+        return this.id;
+    }
+
+    public void setId (long id) {
+        this.id = id;
+    }
+
+    public String getUsuario () {
+        return this.usuario;
+    }
+
+    public void setUsuario (String usuario) {
+        this.usuario = usuario;
+    }
+
+    public Date getFechaNacimiento () {
+        return this.fechaNacimiento;
+    }
+
+    public void setFechaNacimiento (Date fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public List<Grupo> getGrupos () {
+        return this.grupos;
+    }
+
+    public void setGrupos (List<Grupo> grupos) {
+        this.grupos = grupos;
+    }
+
+    public List<Carrera> getCarrera () {
+        return this.carrera;
+    }
+
+    public void setCarrera (List<Carrera> carrera) {
+        this.carrera = carrera;
+    }
+    
+    public double getNotasEstudiante () {
+    	return this.notas;
+    }
+    
+    public void setNotasEstudiante (double notas) {
+    	this.notas = notas;
+    }
+    
+    public double getPAPA () {
+    	return this.PAPA;
+    }
+    
+    public void setPAPA (double PAPA) {
+    	this.PAPA = PAPA;
+    	
+    }
+}
