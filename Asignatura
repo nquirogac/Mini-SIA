@@ -1,0 +1,53 @@
+
+package miniSIA;
+import java.util.List;
+public class Asignatura {
+    private String Nombre;
+    private long Codigo;
+    private String Tipologia;
+    private int Creditos;
+    private Facultad facultad;   
+    private List<Grupo> GruposAsignatura;
+    public String getNombre() {
+        return this.Nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.Nombre = nombre;
+    }
+    public long getCodigo() {
+        return this.Codigo;
+    }
+
+    public void setNombre(long codigo) {
+        this.Codigo = codigo;
+    }
+    public String getTipologia() {
+        return this.Tipologia;
+    }
+
+    public void setTipologia(String tipologia) {
+        this.Tipologia = tipologia;
+    }
+    public int getCreditos() {
+        return this.Creditos;
+    }
+
+    public void setCreditos(int creditos) {
+        this.Creditos = creditos;
+    }
+    public Facultad getFacultad() {
+        return this.facultad;
+    }
+
+    public void setNombre(Facultad facultad) {
+        this.facultad = facultad;
+    }
+    public List<Grupo> getGruposAsignatura() {
+        return this.GruposAsignatura;
+    }
+
+    public void setGruposAsignatura(List<Grupo> gruposasignatura) {
+        this.GruposAsignatura = gruposasignatura;
+    }
+}
