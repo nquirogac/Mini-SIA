@@ -1,0 +1,71 @@
+package miniSIA;
+
+import java.util.List;
+
+public class Grupo {
+    
+    private int numero;
+    private String diasPorSemana;
+    private String horario;
+    private List<Grupo> notasGrupo;
+    private List<Estudiante> gruposEstudiante;
+    private List<Asignatura> gruposAsignatura;
+    private List<Profesor> gruposProfesor;
+
+    public int getNumero () {
+        return this.numero;
+    }
+
+    public void setNumero (int numero) {
+        this.numero = numero;
+    }
+
+    public String getDiasPorSemana () {
+        return this.diasPorSemana;
+    }
+
+    public void setDiasPorSemana (String diasPorSemana) {
+        this.diasPorSemana = diasPorSemana;
+    }
+
+    public String getHorario () {
+        return this.horario;
+    }
+
+    public void setHorario (String horario) {
+        this.horario = horario;
+    }
+    
+    public List<Grupo> getNotasGrupo () {
+    	return this.notasGrupo;
+    }
+    
+    public void setNotasGrupo (List<Grupo> notasGrupo) {
+    	this.notasGrupo = notasGrupo;
+    }
+
+    public List<Estudiante> getGruposEstudiante () {
+        return this.gruposEstudiante;
+    }
+
+    public void setGruposEstudiante (List<Estudiante> gruposEstudiante) {
+        this.gruposEstudiante = gruposEstudiante;
+    }
+
+    public List<Asignatura> getGruposAsignatura () {
+        return this.gruposAsignatura;
+    }
+
+    public void setGruposAsignatura (List<Asignatura> gruposAsignatura) {
+        this.gruposAsignatura = gruposAsignatura;
+    }
+    
+    public List<Profesor> getGruposProfesor () {
+        return this.gruposProfesor;
+    }
+
+    public void setGruposProfesor (List<Profesor> gruposProfesor) {
+        this.gruposProfesor = gruposProfesor;
+    }
+    
+}
