@@ -12,7 +12,7 @@ public class Estudiante {
     private Date fechaNacimiento;
     private List<Grupo> grupos;
     private List<Carrera> carrera;
-    private double notas;
+    private List<Nota> notasEstudiante;
     private double PAPA;
 
 
@@ -72,12 +72,12 @@ public class Estudiante {
         this.carrera = carrera;
     }
     
-    public double getNotasEstudiante () {
-    	return this.notas;
+    public List<Nota> getNotasEstudiante () {
+    	return this.notasEstudiante;
     }
     
-    public void setNotasEstudiante (double notas) {
-    	this.notas = notas;
+    public void setNotasEstudiante (List<Nota> notasEstudiante) {
+    	this.notasEstudiante = notasEstudiante;
     }
     
     public double getPAPA () {
