@@ -5,12 +5,12 @@ import java.util.List;
 public class Grupo {
     
     private int numero;
-    private String diasPorSemana;
+    private String[] diasPorSemana;
     private String horario;
-    private List<Grupo> notasGrupo;
-    private List<Estudiante> gruposEstudiante;
-    private List<Asignatura> gruposAsignatura;
-    private List<Profesor> gruposProfesor;
+    private List<Nota> notasGrupo;
+    private List<Estudiante> estudiantesDelGrupo;
+    private Asignatura asignatura;
+    private Profesor profesor;
 
     public int getNumero () {
         return this.numero;
@@ -20,11 +20,11 @@ public class Grupo {
         this.numero = numero;
     }
 
-    public String getDiasPorSemana () {
+    public String[] getDiasPorSemana () {
         return this.diasPorSemana;
     }
 
-    public void setDiasPorSemana (String diasPorSemana) {
+    public void setDiasPorSemana (String[] diasPorSemana) {
         this.diasPorSemana = diasPorSemana;
     }
 
@@ -36,36 +36,36 @@ public class Grupo {
         this.horario = horario;
     }
     
-    public List<Grupo> getNotasGrupo () {
+    public List<Nota> getNotasGrupo () {
     	return this.notasGrupo;
     }
     
-    public void setNotasGrupo (List<Grupo> notasGrupo) {
+    public void setNotasGrupo (List<Nota> notasGrupo) {
     	this.notasGrupo = notasGrupo;
     }
 
-    public List<Estudiante> getGruposEstudiante () {
-        return this.gruposEstudiante;
+    public List<Estudiante> getEstudiantesDelGrupo () {
+        return this.estudiantesDelGrupo;
     }
 
-    public void setGruposEstudiante (List<Estudiante> gruposEstudiante) {
-        this.gruposEstudiante = gruposEstudiante;
+    public void setEstudiantesDelGrupo (List<Estudiante> estudiantesDelGrupo) {
+        this.estudiantesDelGrupo = estudiantesDelGrupo;
     }
 
-    public List<Asignatura> getGruposAsignatura () {
-        return this.gruposAsignatura;
+    public Asignatura getAsignatura () {
+        return this.asignatura;
     }
 
-    public void setGruposAsignatura (List<Asignatura> gruposAsignatura) {
-        this.gruposAsignatura = gruposAsignatura;
+    public void setAsignatura (Asignatura asignatura) {
+        this.asignatura = asignatura;
     }
     
-    public List<Profesor> getGruposProfesor () {
-        return this.gruposProfesor;
+    public Profesor getProfesor () {
+        return this.profesor;
     }
 
-    public void setGruposProfesor (List<Profesor> gruposProfesor) {
-        this.gruposProfesor = gruposProfesor;
+    public void setProfesor (Profesor profesor) {
+        this.profesor = profesor;
     }
     
 }
