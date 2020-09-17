@@ -27,8 +27,7 @@ public class Prueba {
         Nota nota2 = new Nota(3.7);
         Nota nota3 = new Nota(4.8);
         
-        //carrera1.setFacultad(ingenieria);
-        //carrera2.setFacultad(cienciasEconomicas);
+        
         System.out.println(nota1);
         
     }  
