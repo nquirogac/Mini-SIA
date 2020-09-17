@@ -29,6 +29,7 @@ public class Prueba {
         
         
         System.out.println(nota1);
+        System.out.println(profe1);
         
     }  
 }
