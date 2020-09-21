@@ -5,6 +5,7 @@ import Data.Facultad;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.List;
+import Logic.Prueba;
 
 public final class Profesor {
     
@@ -85,11 +86,20 @@ public final class Profesor {
     }
     @Override
     public String toString() {
-        String idstr = Long.toString(this.getId());
+        
+        int opcion;
+        opcion = Prueba.retornarOpcion();
+        if (opcion!=7){
+            return "Profesor: "+this.getNombre()+" "+this.getApellido();
+        }
+        else{
+         String idstr = Long.toString(this.getId());
         String fecha = DateFormat.getDateInstance().format(this.getFechaNacimiento());
         //+"\nGrupos a cargo: "+this.getGruposEnseñanza()+"\nFacultad: "+this.getFacultad().toString()
         
 	return "Nombre: "+this.getNombre()+" "+this.getApellido()+"\nId: "+idstr+"\n"+"Usuario: "+this.getUsuario()+"\n"+"Fecha de nacimiento: "+fecha ;
-	}
+	   
+        }
+    }
             
 }
