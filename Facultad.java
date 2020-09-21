@@ -1,6 +1,7 @@
-package miniSIA;
+package Data;
+import java.util.Arrays;
 import java.util.List;
-public class Facultad {
+public final class Facultad {
     private String Nombre;
     private long Codigo;
     private String Sede;
@@ -11,7 +12,7 @@ public class Facultad {
     public String getNombre() {
         return this.Nombre;
     }
-
+    
     public void setNombre(String nombre) {
         this.Nombre = nombre;
     }
@@ -19,7 +20,7 @@ public class Facultad {
         return this.Codigo;
     }
 
-    public void setNombre(long codigo) {
+    public void setCodigo(long codigo) {
         this.Codigo = codigo;
     }
     public String getSede() {
@@ -33,7 +34,7 @@ public class Facultad {
         return this.Departamento;
     }
 
-    public void setNombre(String[] departamento) {
+    public void setDepartamento(String[] departamento) {
         this.Departamento = departamento;
     }
     public List<Carrera> getCarrerasFacultad() {
@@ -57,7 +58,43 @@ public class Facultad {
     public void setAsignaturasFacultad(List<Asignatura> asignaturasfacultad) {
         this.AsignaturasFacultad = asignaturasfacultad;
     }
+    public Facultad(String nombre, long codigo,String sede,String[] departamento, List<Carrera> carrerasfacultad,List<Profesor> profesorfacultad,List<Asignatura> asignaturafacultad){
+        this.setNombre(nombre);
+        this.setSede(sede);
+        this.setCodigo(codigo);
+        this.setDepartamento(departamento);
+        this.setCarrerasFacultad(carrerasfacultad);
+        this.setProfesoresFacultad(profesorfacultad);
+        this.setAsignaturasFacultad(asignaturafacultad);
+    }
+    public Facultad(String nombre, long codigo,String sede,String[] departamento){
+        this.setNombre(nombre);
+        this.setSede(sede);
+        this.setCodigo(codigo);
+        this.setDepartamento(departamento);
+    }
+     public Facultad(){
+        this(null,0,null,null);
+    }
+    @Override
+    public String toString() {
+        String codigostr = Long.toString(this.getCodigo());
+        String Departamentos= Arrays.toString(Departamento);
+        String carreras="";
+        
+        /*for(int i=0;i < this.getCarrerasFacultad().size();i++){
+            carreras += this.getCarrerasFacultad().get(i).getNombre()+"\n";
+        }*/
+        
+        
+	return "Nombre: "+this.getNombre()+"\n"+"Sede: "+this.getSede()+"\n"+"Código: "+codigostr+"\n"+"Departamemtos adjuntos: "+Departamentos+"\n"+"Carreras: "+carreras+"\n";
+	}
 }
+
+
+
+
+
 
 
 
