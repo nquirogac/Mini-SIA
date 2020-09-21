@@ -31,7 +31,9 @@ public class Prueba {
         Nota nota3 = new Nota(4.8);
         
         String[] DepartamentosIngenieria={"Sistemas e Industrial","Macanica","Electrica y Electronica"};
-        
+        String[] DepartamentosCiencias={"Biologia","Farmacia","Matematicas","Quimica"};
+	    
+	Facultad ciencias = new Facultad("Ciencias",1232432,"Bogota",DepartamentosCiencias);
         Facultad ingenieria = new Facultad("Ingenieria",1298373,"Bogota",DepartamentosIngenieria);
         
         carrera1.setFacultad(ingenieria);
@@ -42,7 +44,7 @@ public class Prueba {
         ingenieria.setCarrerasFacultad(carrerasingenieria);
         
         Asignatura poo = new Asignatura("Programacion Orientada a Objetos",10001029,"Practica",3);
-        
+        Asignatura elementos = new Asignatura("Elementos de computadores",88199210,"Practica",3);
         
         System.out.println(nota1);
         System.out.println(profe1);
