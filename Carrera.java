@@ -1,5 +1,6 @@
 package Data;
 
+import Logic.Prueba;
 import java.util.List;
 
 public final class Carrera {
@@ -79,9 +80,15 @@ public final class Carrera {
     
     @Override
     public String toString() {
-        String codigostr = Long.toString(this.getCodigo());
-        String creditostr = Integer.toString(this.getCreditos());
-        String estudiantes="";
+        int opcion;
+        opcion = Prueba.retornarOpcion();
+        if (opcion!=2){
+            return "Carrera: "+this.getNombre();
+        }
+        else{
+            String codigostr = Long.toString(this.getCodigo());
+            String creditostr = Integer.toString(this.getCreditos());
+            String estudiantes="";
         /*
         for(int i=0;i < this.getEstudiantesEn().size();i++){
             estudiantes += this.getEstudiantesEn().get(i).toString();
@@ -90,7 +97,9 @@ public final class Carrera {
 //"\nEstudiantes de la carrera: "+this.getEstudiantesEn()+"\nFacultad: "+this.getFacultad()
         //String cadenaRetorno;
         
-	return "Carrera: "+this.getNombre()+"\n"+"Sede: "+this.getSede()+"\n"+"Código: "+codigostr+"\n"+"Créditos totales: "+creditostr;
-	}
+            return "Carrera: "+this.getNombre()+"\n"+"Sede: "+this.getSede()+"\n"+"Código: "+codigostr+"\n"+"Créditos totales: "+creditostr;
+	    
+        }
+    }
     
 }
