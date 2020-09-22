@@ -1,4 +1,4 @@
-package miniSIA;
+package miniSIA; 
 
 import Data.Nota;
 import Data.Estudiante;
