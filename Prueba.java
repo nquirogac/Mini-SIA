@@ -43,6 +43,9 @@ public class Prueba {
         String[] Horario1= {"4pm-6pm","9am-11am","7am-9pm"};
         String[] Horario2 = {"7am-9am","6pm-8pm","9am-11am"};
         
+	Grupo grupo1 = new Grupo(1,DiasPorSemana1,Horario1);
+        Grupo grupo2 = new Grupo(2,DiasPorSemana2,Horario2);
+	    
         String[] DepartamentosIngenieria={"Sistemas e Industrial","Macanica","Electrica y Electronica"};
         String[] DepartamentosCiencias={"Biologia","Farmacia","Matematicas","Quimica"};
         String[] DepartamentosCienciasE={""};
@@ -69,6 +72,11 @@ public class Prueba {
         
         profe1.setFacultad(fce);
         profe2.setFacultad(ingenieria);
+	    
+	grupo1.setAsignatura(poo);
+        grupo2.setAsignatura(macEconomia);
+        grupo1.setProfesor(profe1);
+        grupo2.setProfesor(profe2);
         
         Interfaz.iniciar();
         Interfaz.preguntar();
@@ -86,6 +94,8 @@ public class Prueba {
                     break;
                 case 3:
                     System.out.println("\tEstudiantes");
+                    System.out.println(estudiante1+"\n");
+                    System.out.println(estudiante2+"\n");
                     break;
                 case 4:
                     System.out.println("\tFacultades");
@@ -95,6 +105,8 @@ public class Prueba {
                     break;
                 case 5: 
                     System.out.println("\tGrupos");
+                    System.out.println(grupo1+"\n");
+                    System.out.println(grupo2+"\n");
                     break;
                 case 6:
                     System.out.println("\tNotas");
