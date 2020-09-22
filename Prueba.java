@@ -25,6 +25,8 @@ public class Prueba {
         SimpleDateFormat d = new SimpleDateFormat("dd-MM-yy");
         Date fecha1 = d.parse("23-09-1981"); 
         Date fecha2 = d.parse("29-01-1972");
+        Date fecha3 = d.parse("10-02-1999"); 
+        Date fecha4 = d.parse("17-05-2002");
         
         Profesor profe1 = new Profesor("Marta","Torres",56938456,"mtorresh",fecha2);
         Profesor profe2 = new Profesor("Felipe","Castro",68097547,"fcastroh",fecha1);
@@ -32,6 +34,14 @@ public class Prueba {
         Nota nota1 = new Nota(4.2);
         Nota nota2 = new Nota(3.7);
         Nota nota3 = new Nota(4.8);
+	    
+	Estudiante estudiante1 = new Estudiante("Samanta","Castro",14879569,"smcast",fecha3, 4.3);
+        Estudiante estudiante2 = new Estudiante("Julian","Hernandez",23898408,"jhernan",fecha4, 4.2);
+	    
+	String[] DiasPorSemana1= {"Lunes","Miercoles","Viernes"};
+        String[] DiasPorSemana2= {"Martes","Jueves","Sabado"};
+        String[] Horario1= {"4pm-6pm","9am-11am","7am-9pm"};
+        String[] Horario2 = {"7am-9am","6pm-8pm","9am-11am"};
         
         String[] DepartamentosIngenieria={"Sistemas e Industrial","Macanica","Electrica y Electronica"};
         String[] DepartamentosCiencias={"Biologia","Farmacia","Matematicas","Quimica"};
