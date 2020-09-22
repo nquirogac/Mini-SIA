@@ -9,6 +9,7 @@ import Data.Facultad;
 import Data.Grupo;
 import Data.Nota;
 import Data.Profesor;
+import IU.Interfaz;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -16,7 +17,9 @@ import java.util.Date;
 public class Prueba {
     static int opcion;
     public static void main(String[] args) throws ParseException {  
-        List <Carrera> carrerasingenieria= new ArrayList<Carrera>();
+        List <Carrera> carrerasingenieria= new ArrayList<>();
+        List <Carrera> carrerasciencias= new ArrayList<>();
+        List <Carrera> carrerasfce= new ArrayList<>();
         Carrera carrera1 = new Carrera("Ingeniería de sistemas","Bogotá",2879,165); //
         Carrera carrera2 = new Carrera("Economía","Bogotá",2578,155); //
         SimpleDateFormat d = new SimpleDateFormat("dd-MM-yy");
@@ -32,24 +35,30 @@ public class Prueba {
         
         String[] DepartamentosIngenieria={"Sistemas e Industrial","Macanica","Electrica y Electronica"};
         String[] DepartamentosCiencias={"Biologia","Farmacia","Matematicas","Quimica"};
+        String[] DepartamentosCienciasE={""};
 	    
 	Facultad ciencias = new Facultad("Ciencias",1232432,"Bogota",DepartamentosCiencias);
+        Facultad fce = new Facultad("Ciencias Economicas",90288282,"Bogota",DepartamentosCienciasE);
         Facultad ingenieria = new Facultad("Ingenieria",1298373,"Bogota",DepartamentosIngenieria);
         
         carrera1.setFacultad(ingenieria);
+        carrera2.setFacultad(fce);
         
+        carrerasfce.add(carrera2);
         carrerasingenieria.add(carrera1);
-        carrerasingenieria.add(carrera2);
         
         ingenieria.setCarrerasFacultad(carrerasingenieria);
+        ciencias.setCarrerasFacultad(carrerasciencias);
+        fce.setCarrerasFacultad(carrerasfce);
         
-        Asignatura poo = new Asignatura("Programacion Orientada a Objetos",10001029,"Practica",3);
-        Asignatura elementos = new Asignatura("Elementos de computadores",88199210,"Practica",3);
+        Asignatura poo = new Asignatura("Programacion Orientada a Objetos",10001029,"Disciplinar o profesional",3);
+        Asignatura macEconomia = new Asignatura("Macroeconomia I",88199210,"Disciplinar",4);
         
-        System.out.println(nota1);
-        System.out.println(profe1);
-        System.out.println(carrera1);
-        System.out.println(poo);
+        poo.setFacultad(ingenieria);
+        macEconomia.setFacultad(fce);
+        
+        profe1.setFacultad(fce);
+        profe2.setFacultad(ingenieria);
         
         Interfaz.iniciar();
         Interfaz.preguntar();
@@ -57,6 +66,8 @@ public class Prueba {
         switch (opcion) {
 		case 1:
                     System.out.println("\tAsignaturas");
+                    System.out.println(poo+"\n");
+                    System.out.println(macEconomia+"\n");
                     break;
 		case 2:
                     System.out.println("\tCarreras");
@@ -68,6 +79,9 @@ public class Prueba {
                     break;
                 case 4:
                     System.out.println("\tFacultades");
+                    System.out.println(ingenieria+"\n");
+                    System.out.println(fce+"\n");
+                    System.out.println(ciencias+"\n");
                     break;
                 case 5: 
                     System.out.println("\tGrupos");
