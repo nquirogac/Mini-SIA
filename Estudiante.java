@@ -1,7 +1,12 @@
 package miniSIA;
 
+import Data.Grupo;
+import Data.Carrera;
+import Data.Nota;
+import java.text.DateFormat;
 import java.util.Date;
 import java.util.List;
+import Logic.Prueba;
 
 public class Estudiante {
     
@@ -88,4 +93,35 @@ public class Estudiante {
     	this.PAPA = PAPA;
     	
     }
+    public Estudiante(String nombre,String apellido,long id,String usuario,Date fechaNacimiento,double PAPA){
+    	this.setNombre(nombre);
+        this.setApellido(apellido);
+        this.setId(id);
+        this.setUsuario(usuario);
+        this.setFechaNacimiento(fechaNacimiento);
+        this.setPAPA(PAPA);
+    }
+    public Estudiante(){
+        this(null,null,0,null,null,0);
+        this.setGrupos(null);
+        this.setCarrera(null);
+        this.setNotasEstudiante(null);
+    }
+    @Override
+    public String toString() {
+        
+        int opcion;
+        opcion = Prueba.retornarOpcion();
+        if (opcion!=3){
+            return "Estudiante: "+this.getNombre()+" "+this.getApellido();
+        }
+        else{
+        String idstr = Long.toString(this.getId());
+        String fecha = DateFormat.getDateInstance().format(this.getFechaNacimiento());
+        
+	return "Nombre: "+this.getNombre()+" "+this.getApellido()+"\n"+"Id: "+idstr+"\n"+"Usuario: "+this.getUsuario()+"\n"+"Fecha de nacimiento: "+fecha +"\n"+ "PAPA: "+this.getPAPA();
+	   
+        }
+    }
+          
 }
