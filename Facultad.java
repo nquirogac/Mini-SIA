@@ -84,7 +84,7 @@ public final class Facultad {
         int opcion;
         opcion = Prueba.retornarOpcion();
         if (opcion!=4){
-        return "Facultad: "+this.getNombre()+"\n";
+        return this.getNombre()+"\n";
         }
         else{
         String codigostr = Long.toString(this.getCodigo());
