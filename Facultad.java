@@ -1,4 +1,5 @@
 package Data;
+import Logic.Prueba;
 import java.util.Arrays;
 import java.util.List;
 public final class Facultad {
@@ -72,24 +73,37 @@ public final class Facultad {
         this.setSede(sede);
         this.setCodigo(codigo);
         this.setDepartamento(departamento);
+        
     }
      public Facultad(){
         this(null,0,null,null);
     }
     @Override
     public String toString() {
+        
+        int opcion;
+        opcion = Prueba.retornarOpcion();
+        if (opcion!=4){
+        return "Facultad: "+this.getNombre()+"\n";
+        }
+        else{
         String codigostr = Long.toString(this.getCodigo());
         String Departamentos= Arrays.toString(Departamento);
         String carreras="";
         
-        /*for(int i=0;i < this.getCarrerasFacultad().size();i++){
+        for(int i=0;i < this.getCarrerasFacultad().size();i++){
             carreras += this.getCarrerasFacultad().get(i).getNombre()+"\n";
-        }*/
+        }
         
         
 	return "Nombre: "+this.getNombre()+"\n"+"Sede: "+this.getSede()+"\n"+"Código: "+codigostr+"\n"+"Departamemtos adjuntos: "+Departamentos+"\n"+"Carreras: "+carreras+"\n";
-	}
+        }
+        }
 }
+
+
+
+
 
 
 
